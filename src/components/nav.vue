@@ -1,6 +1,7 @@
 <template>
     <!-- nav-tab -->
     <nav class="nav">
+        <div class="hint" @click="isCollapse=!isCollapse"><i :class="isCollapse?'el-icon-d-arrow-left':'el-icon-d-arrow-right'" ></i></div>
         <el-menu
             router
             default-active="1"
@@ -38,6 +39,9 @@ export default {
         return {
             isCollapse: false
         }
+    },
+    methods:{
+        
     }
 }
 </script>
@@ -46,5 +50,12 @@ export default {
     .nav
         display block
         background-color #545c64
-        // width 200px!important
+        .hint
+            position relative
+            top 0
+            left 70%
+            width 20px
+            color white
+            background #333
+            
 </style>
